@@ -1,0 +1,16 @@
+USE testdb;
+
+CREATE TABLE IF NOT EXISTS students1(
+   name VARCHAR(50) NOT NULL,
+   college VARCHAR(100),
+   marks1 FLOAT CHECK(MARKS1 BETWEEN 0 AND 10), 
+   MARKS2 FLOAT CHECK(MARKS2 BETWEEN 0 AND 10),
+   MARKS3 FLOAT CHECK(MARKS3 BETWEEN 0 AND 10),
+   TechnicalMarks FLOAT CHECK(TechnicalMarks BETWEEN 0 AND 20),
+   
+   TotalMarks FLOAT CHECK(TotalMarks BETWEEN 0 AND 50),
+   Result VARCHAR(10),
+   RankPosition INT
+   );
+DROP TABLE students1;
+TRUNCATE TABLE students1;
